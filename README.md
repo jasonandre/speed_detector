@@ -36,25 +36,42 @@ D. 프로젝트 진행단계
 cnn_model = Sequential()
 
 cnn_model.add(Conv2D(32, kernel_size = 3, activation='relu', input_shape = (32, 32, 3)))		
+
 cnn_model.add(BatchNormalization())	
+
 cnn_model.add(Conv2D(32, kernel_size = 3, activation='relu'))	
+
 cnn_model.add(BatchNormalization())	
+
 cnn_model.add(Conv2D(32, kernel_size = 5, strides=2, padding='same', activation='relu'))	
+
 cnn_model.add(BatchNormalization())	
+
 cnn_model.add(Dropout(0.4))	
 
+
 cnn_model.add(Conv2D(64, kernel_size = 3, activation='relu'))	
+
 cnn_model.add(BatchNormalization())	
+
 cnn_model.add(Conv2D(64, kernel_size = 3, activation='relu'))	
+
 cnn_model.add(BatchNormalization())	
+
 cnn_model.add(Conv2D(64, kernel_size = 5, strides=2, padding='same', activation='relu'))	
+
 cnn_model.add(BatchNormalization())	
+
 cnn_model.add(Dropout(0.4))	
 
 cnn_model.add(Conv2D(128, kernel_size = 4, activation='relu'))	
+
 cnn_model.add(BatchNormalization())	
+
 cnn_model.add(Flatten())	
+
 cnn_model.add(Dropout(0.4))		
+
 cnn_model.add(Dense(43, activation='softmax'))	
 
 cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])	
