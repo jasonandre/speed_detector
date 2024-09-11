@@ -1,51 +1,63 @@
 #speed_detector
 
 A.프로젝트 개요
+
 -20, 30, 50, 80, stop 등 도로에서 관찰가능한 표지판 이미지를 분류하는 모델을 CNN 기반으로 만들었습니다. 
+
 -4인 1조로 프로젝트를 진행했습니다. 각자 모델을 만들고 가장 좋은 것을 선택하는 방식으로 진행했습니다.
+
 -프로젝트기간 : 2024.08.06 ~ 2024.08.09  총4일
 
 B.활용한 스킬
+
 Django 프레임워크, python, html, css, javascript
+
 -프로젝트는 크게 모델 생성과 웹 어플리케이션 제작 단계로 나누어 진행했습니다.
 
 C. 담당 역할
+
 1)django 프레임워크를 활용한 웹 제작
+
 2)웹에서 모델 활성화 
 
 D. 프로젝트 진행단계
+
 1)kaggle, hugging face 등에서 교통이미지 관련 데이터 수집
+
 2)teachable machine, google colab 등을 활용하여 머신러닝 모델생성
+
 3)Django 프레임워크 기반으로 웹 구성
+
 4)모델 배포
 
 #전처리, 평가부분을 제외한 모델 코드 입니다.
 
+
 cnn_model = Sequential()
 
-cnn_model.add(Conv2D(32, kernel_size = 3, activation='relu', input_shape = (32, 32, 3)))
-cnn_model.add(BatchNormalization())
-cnn_model.add(Conv2D(32, kernel_size = 3, activation='relu'))
-cnn_model.add(BatchNormalization())
-cnn_model.add(Conv2D(32, kernel_size = 5, strides=2, padding='same', activation='relu'))
-cnn_model.add(BatchNormalization())
-cnn_model.add(Dropout(0.4))
+cnn_model.add(Conv2D(32, kernel_size = 3, activation='relu', input_shape = (32, 32, 3)))		
+cnn_model.add(BatchNormalization())	
+cnn_model.add(Conv2D(32, kernel_size = 3, activation='relu'))	
+cnn_model.add(BatchNormalization())	
+cnn_model.add(Conv2D(32, kernel_size = 5, strides=2, padding='same', activation='relu'))	
+cnn_model.add(BatchNormalization())	
+cnn_model.add(Dropout(0.4))	
 
-cnn_model.add(Conv2D(64, kernel_size = 3, activation='relu'))
-cnn_model.add(BatchNormalization())
-cnn_model.add(Conv2D(64, kernel_size = 3, activation='relu'))
-cnn_model.add(BatchNormalization())
-cnn_model.add(Conv2D(64, kernel_size = 5, strides=2, padding='same', activation='relu'))
-cnn_model.add(BatchNormalization())
-cnn_model.add(Dropout(0.4))
+cnn_model.add(Conv2D(64, kernel_size = 3, activation='relu'))	
+cnn_model.add(BatchNormalization())	
+cnn_model.add(Conv2D(64, kernel_size = 3, activation='relu'))	
+cnn_model.add(BatchNormalization())	
+cnn_model.add(Conv2D(64, kernel_size = 5, strides=2, padding='same', activation='relu'))	
+cnn_model.add(BatchNormalization())	
+cnn_model.add(Dropout(0.4))	
 
-cnn_model.add(Conv2D(128, kernel_size = 4, activation='relu'))
-cnn_model.add(BatchNormalization())
-cnn_model.add(Flatten())
-cnn_model.add(Dropout(0.4))
-cnn_model.add(Dense(43, activation='softmax'))
+cnn_model.add(Conv2D(128, kernel_size = 4, activation='relu'))	
+cnn_model.add(BatchNormalization())	
+cnn_model.add(Flatten())	
+cnn_model.add(Dropout(0.4))		
+cnn_model.add(Dense(43, activation='softmax'))	
 
-cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
+cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])	
 
 #예측정확도를 점검한 이미지입니다.
 ![image](https://github.com/user-attachments/assets/47df0296-f534-4827-a4b5-56c34399c515)
