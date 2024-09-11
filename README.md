@@ -32,7 +32,6 @@ cnn_model.add(Flatten())
 cnn_model.add(Dropout(0.4))
 cnn_model.add(Dense(43, activation='softmax'))
 
-    # COMPILE WITH ADAM OPTIMIZER AND CROSS ENTROPY COST
 cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
 
