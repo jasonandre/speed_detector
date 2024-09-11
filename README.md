@@ -39,9 +39,10 @@ cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["a
 #안내사항
 1. 모델 위치는 base\models\traffic_sign_classfication_cnn.keras 입니다.
 2. 웹의 프론트엔드 부분은 base\templates\index.html 에서 확인하실 수 있습니다.
-3. README.md 파일을 제외한 나머지 파일을 하나의 폴더에 다운받으신 후 명령 프롬프트에서 python manage.py runserver 명령어로 실행해 보실 수 있습니다.
+3. README.md 파일을 제외한 나머지 파일을 하나의 폴더에 다운받으신 후, 명령 프롬프트 혹은 anaconda 프롬프트에서 'cd 폴더이름' 명령어를 이용해 해당 폴더로 이동하신 다음 python manage.py runserver 명령어로 실행해 보실 수 있습니다.
 4. 서버 유지비 문제로, 모델 실행가능한 사이트주소는 별도로 제공하지 않습니다. 
 
+![image](https://github.com/user-attachments/assets/1c090b12-14e8-4212-b371-9806c2364fa5)
 
 
 
