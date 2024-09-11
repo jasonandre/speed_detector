@@ -1,4 +1,5 @@
 #speed_detector
+
 A.프로젝트 개요
 -20, 30, 50, 80, stop 등 도로에서 관찰가능한 표지판 이미지를 분류하는 모델을 CNN 기반으로 만들었습니다. 
 -4인 1조로 프로젝트를 진행했습니다. 각자 모델을 만들고 가장 좋은 것을 선택하는 방식으로 진행했습니다.
@@ -60,6 +61,7 @@ cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["a
 ![image](https://github.com/user-attachments/assets/1c090b12-14e8-4212-b371-9806c2364fa5)
 
 E.프로젝트 회고 
+
 1)만족했던 부분: 
 웹에서 실행할 때 버전호환이나 모델손상 등 문제없이 정상작동합니다. 이미지종류만 다르게 하면 다른 도메인의 이미지분류에도 적용가능할 것으로 보입니다.
 
