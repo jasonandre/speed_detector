@@ -42,6 +42,7 @@ cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["a
 3. README.md 파일을 제외한 나머지 파일을 하나의 폴더에 다운받으신 후, 명령 프롬프트 혹은 anaconda 프롬프트에서 'cd 폴더이름' 명령어를 이용해 해당 폴더로 이동하신 다음 python manage.py runserver 명령어로 실행해 보실 수 있습니다.
 4. 서버 유지비 문제로, 모델 실행가능한 사이트주소는 별도로 제공하지 않습니다. 
 
+#이미지는 웹에서 표지판 이미지를 넣었을 때 실행 결과 입니다.
 ![image](https://github.com/user-attachments/assets/1c090b12-14e8-4212-b371-9806c2364fa5)
 
 
