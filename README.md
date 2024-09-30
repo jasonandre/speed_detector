@@ -8,11 +8,15 @@ A.프로젝트 개요
 
 -프로젝트기간 : 2024.08.06 ~ 2024.08.09  총4일
 
+
+
 B.활용한 스킬
 
 Django 프레임워크, python, html, css, javascript
 
 -프로젝트는 크게 모델 생성과 웹 어플리케이션 제작 단계로 나누어 진행했습니다.
+
+
 
 C. 담당 역할
 
@@ -21,6 +25,8 @@ C. 담당 역할
 2)웹에서 모델 활성화 
 
 3)머신러닝 모델개발
+
+
 
 D. 프로젝트 진행단계
 
@@ -31,6 +37,9 @@ D. 프로젝트 진행단계
 3)Django 프레임워크 기반으로 웹 구성
 
 4)모델 배포
+
+
+
 
 #전처리, 평가부분을 제외한 모델 코드 입니다.
 
@@ -78,8 +87,13 @@ cnn_model.add(Dense(43, activation='softmax'))
 
 cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])	
 
+
+
+
 #예측정확도를 점검한 이미지입니다.
 ![image](https://github.com/user-attachments/assets/47df0296-f534-4827-a4b5-56c34399c515)
+
+
 
 
 #안내사항
@@ -88,8 +102,12 @@ cnn_model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["a
 3. README.md 파일을 제외한 나머지 파일을 하나의 폴더에 다운받으신 후, 명령 프롬프트 혹은 anaconda 프롬프트에서 'cd 폴더이름' 명령어를 이용해 해당 폴더로 이동하신 다음 python manage.py runserver 명령어로 실행해 보실 수 있습니다.
 4. 서버 유지비 문제로, 모델 실행가능한 사이트주소는 별도로 제공하지 않습니다. 
 
+
+
 #이미지는 웹에서 표지판 이미지를 넣었을 때 실행 결과 입니다.
 ![image](https://github.com/user-attachments/assets/1c090b12-14e8-4212-b371-9806c2364fa5)
+
+
 
 E.프로젝트 회고 
 
