@@ -1,4 +1,4 @@
-# speed_detector 프로젝트
+# vehicle speed signs 인식 프로젝트
 
 A. 프로젝트 개요
   - 20, 30, 50, 80, stop 등 도로에서 관찰가능한 표지판 이미지를 분류하는 모델을 CNN 기반으로 만들었습니다. 
