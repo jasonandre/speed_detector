@@ -15,10 +15,40 @@ C. 담당 역할
  - 머신러닝 모델개발
 
 D. 프로젝트 진행단계
-  1. kaggle, hugging face 등에서 교통이미지 관련 데이터 수집
-  2. teachable machine, google colab 등을 활용하여 머신러닝 모델생성
-  3. Django 프레임워크 기반으로 웹 구성
-  4. 모델 실행결과 확인 및 오류수정
+  1. kaggle, hugging face 에서 교통이미지 관련 데이터 수집
+  2. IDE(google colab, VScode)에서  머신러닝 모델생성
+     #데이터 수
+     train 34799 개
+     valid  801 개
+     test   638 개
+
+     #데이터 전처리
+     셔플
+     to_categorical 적용 - 정수형 클래스 레이블 원핫인코딩
+
+     #모델
+     input 데이터 : 32 * 32 RGB 이미지
+     필터수 : 32개
+     kernel_size : 3
+     필터수 32개로 배치정규화 3회, 드랍아웃 1회
+     필터수 64개로 배치정규화 3회, 드랍아웃 1회
+     필터수 128개로 배치정규화 1회, 드랍아웃 1회
+     모델 컴파일 시, optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"]
+
+     #모델 학습
+     epoch 10회
+     batch size = 500
+     validation_split = 0.2
+
+     #결과
+     accuracy : 0.9932
+     loss : 0.0241
+     val_accuracy : 0.1963
+     val_loss 9.1533
+     
+     
+  4. Django 프레임워크 기반으로 웹 구성
+  5. 모델 실행결과 확인 및 오류수정
 
 #예측정확도를 점검한 이미지입니다.
 ![image](https://github.com/user-attachments/assets/47df0296-f534-4827-a4b5-56c34399c515)
