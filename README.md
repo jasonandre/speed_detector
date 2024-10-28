@@ -6,7 +6,7 @@ A. 프로젝트 개요
   - 프로젝트기간 : 2024.08.06 ~ 2024.08.09  총4일
 
 B. 활용한 스킬
-  - Django 프레임워크, python, html, css, javascript
+  - Django, python, html, css, javascript
   - 프로젝트는 크게 모델 생성과 웹 어플리케이션 제작 단계로 나누어 진행했습니다.
 
 C. 담당 역할
@@ -18,7 +18,7 @@ D. 프로젝트 진행단계
   1. kaggle, hugging face 등에서 교통이미지 관련 데이터 수집
   2. teachable machine, google colab 등을 활용하여 머신러닝 모델생성
   3. Django 프레임워크 기반으로 웹 구성
-  4. 모델 실행결과
+  4. 모델 실행결과 확인 및 오류수정
 
 #예측정확도를 점검한 이미지입니다.
 ![image](https://github.com/user-attachments/assets/47df0296-f534-4827-a4b5-56c34399c515)
