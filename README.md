@@ -17,14 +17,15 @@ C. 담당 역할
 D. 프로젝트 진행단계
   1. kaggle, hugging face 에서 교통이미지 관련 데이터 수집
   2. IDE(google colab, VScode)에서  머신러닝 모델생성
+     
      #데이터 수
      - train 34799 개
      - valid  801 개
      - test   638 개
 
      #데이터 전처리
-     셔플
-     to_categorical 적용 - 정수형 클래스 레이블 원핫인코딩
+     - 셔플
+     - to_categorical 적용 - 정수형 클래스 레이블 원핫인코딩
 
      #모델
      - input 데이터 : 32 * 32 RGB 이미지
@@ -47,8 +48,18 @@ D. 프로젝트 진행단계
      - val_loss 9.1533
      
      
-  4. Django 프레임워크 기반으로 웹 구성
+  3. Django 프레임워크 기반으로 웹 구성
+   - base 폴더
+      - models 에 생성한 모델첨부
+      - templates 폴더의 index.html 문서에 웹 프론트엔드 작업(이미지 입력, 문구, 폰트 등)
+      - views, urls, static 설정
+      - media 폴더에 입력받은 이미지 저장 설정
+   - speed_detector 폴더
+      - settings, urls 설정 
+      
   5. 모델 실행결과 확인 및 오류수정
+
+
 
 #예측정확도를 점검한 이미지입니다.
 ![image](https://github.com/user-attachments/assets/47df0296-f534-4827-a4b5-56c34399c515)
@@ -64,8 +75,12 @@ D. 프로젝트 진행단계
 
 
 
+
+
 #이미지는 웹에서 표지판 이미지를 넣었을 때 실행 결과 입니다.
 ![image](https://github.com/user-attachments/assets/1c090b12-14e8-4212-b371-9806c2364fa5)
+
+
 
 
 
