@@ -1,13 +1,13 @@
 # Traffic Signs 인식 및 분류 프로젝트
 
 A. 프로젝트 개요
-  - 20, 30, 50, 80, stop 등 도로에서 관찰가능한 표지판 이미지를 분류하는 모델을 CNN 기반으로 만들었습니다. 
-  - 4인 1조로 프로젝트를 진행했습니다.
+  - 20, 30, 50, 80, stop 등 도로에서 관찰가능한 표지판 이미지를 분류하는 CNN 모델
+  - 참여 인원 4인
   - 프로젝트기간 : 2024.07.15 ~ 2024.08.09
 
 B. 활용한 스킬
-  - Django, python, html, css, javascript
-  - 프로젝트는 크게 모델 생성과 웹 어플리케이션 제작 단계로 나누어 진행했습니다.
+  - 웹 : Django, html, css, javascript , AI : Conv2D 
+  - 프로젝트는 CNN모델 개발과 웹 어플리케이션 제작 단계로 나누어 진행
 
 C. 담당 역할
  - django 프레임워크를 활용한 웹 제작
@@ -25,15 +25,18 @@ D. 프로젝트 진행단계
 
      #데이터 전처리
      - 셔플
-     - to_categorical 적용 - 정수형 클래스 레이블 원핫인코딩
+     - 정수형 클래스 레이블 원핫인코딩 : to_categorical
 
      #모델
      - input 데이터 : 32 * 32 RGB 이미지
      - kernel_size : 3
-     - 필터수 32개로 배치정규화 3회, 드랍아웃 1회
-     - 필터수 64개로 배치정규화 3회, 드랍아웃 1회
-     - 필터수 128개로 배치정규화 1회, 드랍아웃 1회
-     - 모델 컴파일 시, optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"]
+     - 총 레이어 수 7개 (input, output 제외)  
+     - layer 3개, 필터수 32, 배치정규화 3회, 드랍아웃 1회
+     - layer 3개, 필터수 64, 배치정규화 3회, 드랍아웃 1회
+     - layer 1개, 필터수 128, 배치정규화 1회, 드랍아웃 1회
+     - 라벨 수 43
+     - 활성화 함수 :relu , 출력 레이어 활성화 함수 : softmax
+     - optimizer="adam", loss="categorical_crossentropy", metrics="accuracy"
 
      #모델 학습
      - epoch 10회
