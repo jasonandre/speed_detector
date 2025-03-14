@@ -44,10 +44,10 @@ D. 프로젝트 진행단계
      - validation_split = 0.2
 
      #결과
-     - accuracy : 0.9932
-     - loss : 0.0241
-     - val_accuracy : 0.1963
-     - val_loss 9.1533
+     - accuracy : 0.9928
+     - loss : 0.0279
+     - val_accuracy : 0.9895
+     - val_loss 0.0365
      
      
   3. Django 프레임워크 기반으로 웹 구성
